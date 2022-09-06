@@ -50,6 +50,7 @@ class Revision(models.Model):
 
     user = models.ForeignKey(
         settings.AUTH_USER_MODEL,
+        related_name='+',
         blank=True,
         null=True,
         on_delete=models.SET_NULL,
